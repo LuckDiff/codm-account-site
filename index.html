@@ -1,116 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CODM Garena Accounts for Sale</title>
-  <meta name="description" content="CODM Garena accounts for sale. Trusted PH seller. Contact @Luc_kDiff" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CODM Garena Accounts for Sale</title>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5K4GF4QQ6C"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-5K4GF4QQ6C');
-  </script>
-
-  <style>
-    body {margin:0;font-family:Arial;background:#0b0614;color:#e5e7eb;}
-    header {background:#12081f;padding:24px;text-align:center;}
-    header img {max-width:90px;border-radius:50%;}
-    h1 {margin:12px 0 4px;}
-    .verified {color:#22c55e;font-weight:bold;}
-    .container {max-width:1100px;margin:24px auto;padding:0 16px;}
-    .notice {background:#1a0a2a;border-left:4px solid #a855f7;padding:12px;margin-bottom:20px;}
-    .grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
-    .card {background:#140a22;border-radius:14px;padding:16px;box-shadow:0 10px 20px rgba(0,0,0,.4);}
-    .card img {width:100%;border-radius:10px;}
-    .price {font-size:20px;font-weight:bold;margin-top:10px;color:#a855f7;}
-    .btn {display:inline-block;margin-top:10px;padding:10px 14px;background:#a855f7;color:#12081f;text-decoration:none;border-radius:8px;font-weight:bold;}
-    .gcash {background:#0f172a;border-radius:12px;padding:16px;margin-top:30px;}
-    footer {text-align:center;padding:16px;color:#9ca3af;}
-    a {color:#c4b5fd;text-decoration:none;}
-  </style>
+<style>
+body{margin:0;font-family:Arial;background:#0b0614;color:#e5e7eb}
+header{background:#12081f;padding:24px;text-align:center}
+header img{max-width:90px;border-radius:50%}
+h1{margin:12px 0 4px}
+.verified{color:#22c55e;font-weight:bold}
+.container{max-width:1100px;margin:24px auto;padding:0 16px}
+.notice{background:#1a0a2a;border-left:4px solid #a855f7;padding:12px;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:#140a22;border-radius:14px;padding:16px;box-shadow:0 10px 20px rgba(0,0,0,.4)}
+.card img{width:100%;border-radius:10px}
+.price{font-size:20px;font-weight:bold;margin-top:10px;color:#a855f7}
+.btn{display:inline-block;margin-top:10px;padding:10px 14px;background:#a855f7;color:#12081f;text-decoration:none;border-radius:8px;font-weight:bold;cursor:pointer}
+.form{background:#140a22;border-radius:14px;padding:16px;margin-bottom:24px}
+input,textarea{width:100%;margin-top:8px;padding:10px;border-radius:8px;border:none}
+textarea{min-height:100px}
+.admin-btn{background:#22c55e;color:#022c22;padding:6px 10px;border-radius:6px;cursor:pointer;margin-top:10px;display:inline-block}
+.hidden{display:none}
+footer{text-align:center;padding:16px;color:#9ca3af}
+a{color:#c4b5fd;text-decoration:none}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="https://i.imgur.com/y3VFSK5.jpeg" alt="LuckDiff Logo">
-  <h1>LuckDiff CODM Shop</h1>
-  <div class="verified">✔ VERIFIED SELLER</div>
-  <p>Telegram: @Luc_kDiff</p>
+<img src="https://i.imgur.com/y3VFSK5.jpeg" alt="LuckDiff Logo">
+<h1>LuckDiff CODM Shop</h1>
+<div class="verified">✔ VERIFIED SELLER</div>
+<p>Telegram: @Luc_kDiff</p>
 </header>
 
 <div class="container">
 
-  <div class="notice">
-    ⚠️ Selling game accounts may violate Garena/Activision TOS. Buy at your own risk.
-  </div>
+<div class="notice">
+⚠️ Selling game accounts may violate Garena/Activision TOS. Buy at your own risk.
+</div>
 
-  <h2>Available Accounts</h2>
+<!-- AUTH -->
+<div class="form" id="authBox">
+<h2>Login / Register</h2>
+<input id="username" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+<button class="btn" onclick="login()">Login</button>
+<button class="btn" onclick="register()">Register</button>
+<p id="authMsg"></p>
+</div>
 
-  <div class="grid">
+<!-- SELL FORM -->
+<div class="form hidden" id="sellBox">
+<h2>Submit Account (Approval Required)</h2>
+<input type="file" id="img" accept="image/*">
+<textarea id="details" placeholder="Account details (min 30 characters)"></textarea>
+<input id="tg" placeholder="Telegram username (@username)">
+<button class="btn" onclick="submitListing()">Submit</button>
+<p id="sellMsg"></p>
+</div>
 
-    <!-- NEW ACCOUNT -->
-    <div class="card">
-      <img src="https://i.imgur.com/kYYXDhy.jpeg" alt="AK117 Lava Remix CODM Account">
-      <h3>AK117 Lava Remix Main Account</h3>
+<h2>Available Accounts</h2>
+<div class="grid" id="grid"></div>
 
-      <p>
-        💠 DETAILS 💠<br>
-        🔴 AK117 - Lava Remix<br>
-        🟠 UL736 - Depth Charge<br>
-        🟠 Stun Baton - Surge Baton<br>
-        🟠 AK-47 - ICB Rifle<br>
-        🟠 J358 - Fin Funnel v Gundam<br>
-        🟠 CR-56 AMAX - Bass Drop<br>
-        🟠 RUS-79U - Mystical Lamp<br>
-        🟠 M4 - Black Gold Royal<br>
-        🟣 425 G Skins<br>
-        🟣 182 OP Skins
-      </p>
+<div class="form">
+<h2>Payment Method</h2>
+<p><strong>GCash:</strong> Available after Telegram confirmation</p>
+</div>
 
-      <p>
-        💠 ABOUT 💠<br>
-        🟢 PH Server 🇵🇭<br>
-        🟢 6x MP Legendary Series 🆙<br>
-        🟢 7x BR Legendary Series 🆙<br>
-        🟢 Good for Main
-      </p>
-
-      <p>
-        💠 BINDINGS 💠<br>
-        🟢 No FB<br>
-        🟢 Surrender Garena<br>
-        🟢 No ID<br>
-        🟢 CD Num<br>
-        🟢 Surrender Gmail
-      </p>
-
-      <div class="price">₱2,000</div>
-      <a class="btn" href="https://t.me/Luc_kDiff" target="_blank">Contact on Telegram</a>
-    </div>
-
-  </div>
-
-  <div class="gcash">
-    <h2>Payment Method</h2>
-    <p><strong>GCash:</strong> Available after Telegram confirmation</p>
-  </div>
-
-  <h2 style="margin-top:32px;">Official Telegram Links</h2>
-  <p>📢 <a href="https://t.me/lucksofficialchannel" target="_blank">Main Channel</a></p>
-  <p>🛒 <a href="https://t.me/LucksDiffShop" target="_blank">TH Shop</a></p>
-  <p>✅ <a href="https://t.me/legitemcyniluckdiff" target="_blank">Proof of Success</a></p>
-  <p>ℹ️ <a href="https://t.me/allaboutlucksdiff" target="_blank">All About Luck</a></p>
+<h2 style="margin-top:32px;">Official Telegram Links</h2>
+<p>📢 <a href="https://t.me/lucksofficialchannel" target="_blank">Main Channel</a></p>
+<p>🛒 <a href="https://t.me/LucksDiffShop" target="_blank">TH Shop</a></p>
+<p>✅ <a href="https://t.me/legitemcyniluckdiff" target="_blank">Proof of Success</a></p>
+<p>ℹ️ <a href="https://t.me/allaboutlucksdiff" target="_blank">All About Luck</a></p>
 
 </div>
 
-<footer>
-  © 2025 LuckDiff CODM Marketplace
-</footer>
+<footer>© 2025 LuckDiff CODM Marketplace</footer>
+
+<script>
+const ADMIN_USER="Luc_kDiff";
+const ADMIN_PASS="Rainier@19";
+const COOLDOWN=600000; // 10 minutes (users only)
+
+let currentUser=localStorage.getItem("currentUser");
+let isAdmin=localStorage.getItem("isAdmin")==="1";
+
+function register(){
+if(!username.value||!password.value){
+authMsg.innerText="Fill all fields";return;
+}
+localStorage.setItem("user_"+username.value,password.value);
+authMsg.innerText="Registered. You can login.";
+}
+
+function login(){
+if(username.value===ADMIN_USER && password.value===ADMIN_PASS){
+isAdmin=true;
+localStorage.setItem("isAdmin","1");
+}else{
+if(localStorage.getItem("user_"+username.value)!==password.value){
+authMsg.innerText="Invalid login";return;
+}
+}
+currentUser=username.value;
+localStorage.setItem("currentUser",currentUser);
+authBox.classList.add("hidden");
+sellBox.classList.remove("hidden");
+loadListings();
+}
+
+function submitListing(){
+/* COOLDOWN ONLY FOR NON-ADMIN */
+if(!isAdmin){
+let last=localStorage.getItem("lastSubmit");
+if(last && Date.now()-last<COOLDOWN){
+sellMsg.innerText="Please wait before submitting again";
+return;
+}
+}
+
+if(!img.files[0] || details.value.length<30 || !tg.value.startsWith("@")){
+sellMsg.innerText="Invalid input";
+return;
+}
+
+let r=new FileReader();
+r.onload=()=>{
+let pending=JSON.parse(localStorage.getItem("pending")||"[]");
+pending.push({
+img:r.result,
+details:details.value,
+tg:tg.value
+});
+localStorage.setItem("pending",JSON.stringify(pending));
+
+if(!isAdmin){
+localStorage.setItem("lastSubmit",Date.now());
+}
+
+sellMsg.innerText=isAdmin
+? "Posted instantly (admin mode)"
+: "Submitted for approval";
+};
+r.readAsDataURL(img.files[0]);
+}
+
+function loadListings(){
+grid.innerHTML="";
+let live=JSON.parse(localStorage.getItem("live")||"[]");
+
+live.forEach(l=>{
+grid.innerHTML+=`
+<div class="card">
+<img src="${l.img}">
+<p>${l.details.replace(/\n/g,"<br>")}</p>
+<a class="btn" href="https://t.me/${l.tg.replace("@","")}" target="_blank">Contact</a>
+</div>`;
+});
+
+/* ADMIN VIEW */
+if(isAdmin){
+let pending=JSON.parse(localStorage.getItem("pending")||"[]");
+pending.forEach((l,i)=>{
+grid.innerHTML+=`
+<div class="card">
+<img src="${l.img}">
+<p>${l.details.replace(/\n/g,"<br>")}</p>
+<p>${l.tg}</p>
+<div class="admin-btn" onclick="approve(${i})">Approve</div>
+</div>`;
+});
+}
+}
+
+function approve(i){
+let pending=JSON.parse(localStorage.getItem("pending"));
+let live=JSON.parse(localStorage.getItem("live")||"[]");
+live.push(pending[i]);
+pending.splice(i,1);
+localStorage.setItem("pending",JSON.stringify(pending));
+localStorage.setItem("live",JSON.stringify(live));
+loadListings();
+}
+
+/* AUTO LOGIN */
+if(currentUser){
+authBox.classList.add("hidden");
+sellBox.classList.remove("hidden");
+loadListings();
+}
+</script>
 
 </body>
 </html>
